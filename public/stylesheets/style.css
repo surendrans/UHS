@@ -1,0 +1,7 @@
+#wrapper {min-width: 940px; margin-left: 0 !important;}
+#wrapper #header {padding: 45px; border-bottom: #2D2D2D 2px solid; }
+#wrapper #header .img_right {float:right; top: 50px; right: 20px; position:absolute;}
+#wrapper #header .img_left { top: 50px; left: 60px; position:absolute;}
+#side_bar, #content {padding-top: 50px;}
+.well {background-color: #B0E0E6;}
+

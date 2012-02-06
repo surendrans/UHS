@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<table class="bordered-table">
+ <tr>
+  <td><b>Name:</b></td>
+  <td><%= @admin.name %></td>
+ </tr>
+
+ <tr>
+  <td><b>Password:</b></td>
+  <td><%= @admin.password %></td>
+ </tr>
+</table> 
+
+
+<%= link_to 'Edit', edit_admin_path(@admin), :class => "btn info" %> 
+<%= link_to 'Back', admins_path, :class => "btn"%>

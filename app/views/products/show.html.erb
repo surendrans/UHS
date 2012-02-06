@@ -1,0 +1,31 @@
+<table class="bordered-table">
+<tr>
+<td><b>Name:</b>
+</td>
+<td>  <%= @product.name %>
+</td>
+</tr>
+<tr>
+<td>  <b>Price:</b>
+</td>
+<td>  <%= @product.price %>
+</td>
+</tr>
+
+<tr>
+<td>  <b>Discount:</b>
+</td>
+<td>  <%= @product.discount %>
+</td>
+</tr>
+<tr>
+<td>   <b>Barcode:</b>
+</td>
+<td>  <%= @product.barcode %>
+</td>
+</tr>
+
+</table>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @delivery_unit.manufacturer %>
+</p>
+
+<p>
+  <b>Unit model:</b>
+  <%= @delivery_unit.unit_model %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @delivery_unit.desc %>
+</p>
+
+<p>
+  <b>Prefix serial:</b>
+  <%= @delivery_unit.prefix_serial %>
+</p>
+
+<p>
+  <b>Delivery:</b>
+  <%= @delivery_unit.delivery %>
+</p>
+
+
+<%= link_to 'Edit', edit_delivery_unit_path(@delivery_unit) %> |
+<%= link_to 'Back', delivery_units_path %>

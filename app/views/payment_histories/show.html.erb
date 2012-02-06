@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<table class="bordered-table">
+<tr>
+<td>Customer:
+</td>
+<td><%= @payment_history.customer %>
+</td>
+</tr>
+<tr>
+<td>Items:
+</td>
+<td><%= @payment_history.items %>
+</td>
+</tr>
+
+<tr>
+<td>Total:
+</td>
+<td><%= @payment_history.total %>
+</td>
+</tr>
+
+</table>
+
+<%= link_to 'Edit', edit_payment_history_path(@payment_history) %> |
+<%= link_to 'Back', payment_histories_path %>

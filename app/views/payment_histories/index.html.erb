@@ -1,0 +1,25 @@
+<h1>Listing payment histories</h1>
+<table class="bordered-table zebra-striped">
+  
+  <thead>
+  <tr>
+    <th>Customer</th>
+    <th>Items</th>
+    <th>Total</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+  <tbody>
+<% @payment_histories.each do |payment_history| %>
+  <tr>
+    <td><%= payment_history.customer %></td>
+    <td><%= payment_history.items %></td>
+    <td><%= payment_history.total %></td>
+    <td><%= link_to 'Show', payment_history %></td>  
+    <td><%= link_to 'Destroy', payment_history, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />

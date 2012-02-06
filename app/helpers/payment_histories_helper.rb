@@ -1,0 +1,2 @@
+module PaymentHistoriesHelper
+end

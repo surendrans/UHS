@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pickup.name %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @pickup.code %>
+</p>
+
+
+<%= link_to 'Edit', edit_pickup_path(@pickup) %> |
+<%= link_to 'Back', pickups_path %>

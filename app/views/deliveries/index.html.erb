@@ -1,0 +1,37 @@
+<h1>Listing deliveries</h1>
+
+<table>
+  <tr>
+    <th>Transfer no</th>
+    <th>Ordered by</th>
+    <th>Delivery note</th>
+    <th>Po no</th>
+    <th>Deliver date</th>
+    <th>Pickup</th>
+    <th>Phone no</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deliveries.each do |delivery| %>
+  <tr>
+    <td><%= delivery.transfer_no %></td>
+    <td><%= delivery.ordered_by %></td>
+    <td><%= delivery.delivery_note %></td>
+    <td><%= delivery.po_no %></td>
+    <td><%= delivery.deliver_date %></td>
+    <td><%= delivery.pickup %></td>
+    <td><%= delivery.phone_no %></td>
+    <td><%= delivery.address %></td>
+    <td><%= link_to 'Show', delivery %></td>
+    <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
+    <td><%= link_to 'Destroy', delivery, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Delivery', new_delivery_path %>

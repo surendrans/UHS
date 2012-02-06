@@ -1,0 +1,26 @@
+<h1>Listing Users</h1>
+<table class="bordered-table zebra-striped">
+
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th colspn="3"></th>
+  </tr>
+  </thead>
+  <tbody>
+<% @admins.each do |admin| %>
+  <tr>
+    <td><%= admin.name %></td>
+    <td><%= admin.password %></td>
+    <td><%= link_to 'Show', admin %></td>
+    <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+    <td><%= link_to 'Destroy', admin, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_admin_path, :class => "btn info" %>

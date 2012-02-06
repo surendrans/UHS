@@ -1,0 +1,29 @@
+<%= form_for(@payment_history) do |f| %>
+  <% if @payment_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment_history.errors.count, "error") %> prohibited this payment_history from being saved:</h2>
+
+      <ul>
+      <% @payment_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :items %><br />
+    <%= f.text_field :items %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br />
+    <%= f.text_field :total %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
