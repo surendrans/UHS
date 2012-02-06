@@ -26,7 +26,7 @@ WincorNixdorf::Application.routes.draw do
   
   get 'WebModPayment/:user_id' => 'products#WebModPayment'
   
-  get 'api' => 'products#api'
+  get 'api' => 'pickups#api'
   get "api/v1/pickup/:code/get_deliveries" => "pickups#get_deliveries"
 
   devise_for :users

@@ -80,6 +80,10 @@ class PickupsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+ 
+  def api
+  end
+  
   
   def get_deliveries
 #	@pickup = Pickup.find_by_code(params[:code]).include(:deliveries)
@@ -92,7 +96,8 @@ class PickupsController < ApplicationController
 	end
 	render :json => p
   end
-  
+ 
+ private 
   def pick_up_deliveries(d)
   		d.map do |de|
 		{:transfer_no => de.transfer_no,
