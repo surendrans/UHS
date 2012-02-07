@@ -7,8 +7,7 @@
     <th>Unit model</th>
     <th>Desc</th>
     <th>Prefix serial</th>
-    <th>Delivery</th>
-    <th colspn="3"></th>
+    <th colspn="3">Actions</th>
   </tr>
  </thead>
  <tbody>
@@ -18,10 +17,9 @@
     <td><%= delivery_unit.unit_model %></td>
     <td><%= delivery_unit.desc %></td>
     <td><%= delivery_unit.prefix_serial %></td>
-    <td><%= delivery_unit.delivery %></td>
-    <td><%= link_to 'Show', delivery_unit %></td>
-    <td><%= link_to 'Edit', edit_delivery_unit_path(delivery_unit) %></td>
-    <td><%= link_to 'Destroy', delivery_unit, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', pickup_delivery_delivery_unit_path(@pickup, @delivery, delivery_unit) %></td>
+    <td><%= link_to 'Edit', edit_pickup_delivery_delivery_unit_path(@pickup, @delivery,delivery_unit) %></td>
+    <td><%= link_to 'Destroy', pickup_delivery_delivery_unit_path(@pickup, @delivery,delivery_unit), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
  </tbody>
@@ -29,4 +27,4 @@
 
 <br />
 
-<%= link_to 'New Delivery unit', new_delivery_unit_path, :class => "btn info" %>
+<%= link_to 'New Delivery unit', new_pickup_delivery_delivery_unit_path(@pickup, @delivery), :class => "btn info" %>

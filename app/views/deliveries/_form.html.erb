@@ -1,4 +1,4 @@
-<%= form_for(@delivery) do |f| %>
+<%= form_for([@pickup, @delivery]) do |f| %>
   <% if @delivery.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>

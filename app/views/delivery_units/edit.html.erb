@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @delivery_unit %> |
-<%= link_to 'Back', delivery_units_path %>
+<%= link_to 'Show', pickup_delivery_delivery_unit_path(@pickup, @delivery, @delivery_unit) %> |
+<%= link_to 'Back',  pickup_delivery_delivery_units_path(@pickup, @delivery) %>

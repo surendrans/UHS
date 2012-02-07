@@ -5,7 +5,7 @@
   <tr>
     <th>Name</th>
     <th>Code</th>
-    <th colspn="3"></th>
+    <th colspn="4"></th>
   </tr>
  </thead>
  <tbody>
@@ -13,6 +13,7 @@
   <tr>
     <td><%= pickup.name %></td>
     <td><%= pickup.code %></td>
+    <td><%= link_to "Deliveries", pickup_deliveries_path(pickup)%></td>
     <td><%= link_to 'Show', pickup %></td>
     <td><%= link_to 'Edit', edit_pickup_path(pickup) %></td>
     <td><%= link_to 'Destroy', pickup, :confirm => 'Are you sure?', :method => :delete %></td>

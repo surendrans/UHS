@@ -1,4 +1,4 @@
-<%= form_for(@delivery_unit) do |f| %>
+<%= form_for([@pickup, @delivery, @delivery_unit]) do |f| %>
   <% if @delivery_unit.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@delivery_unit.errors.count, "error") %> prohibited this delivery_unit from being saved:</h2>
@@ -26,10 +26,6 @@
   <div class="field">
     <%= f.label :prefix_serial %><br />
     <%= f.text_field :prefix_serial %>
-  </div>
-  <div class="field">
-    <%= f.label :delivery %><br />
-    <%= f.text_field :delivery_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

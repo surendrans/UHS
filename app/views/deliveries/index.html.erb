@@ -1,6 +1,6 @@
 <h1>Listing deliveries</h1>
 
-<table class="bordered-table zebra-striped" width="640px;">
+<table class="bordered-table zebra-striped" width="680px;">
  <thead>
   <tr>
     <th>Transfer no</th>
@@ -8,10 +8,8 @@
     <th>Delivery note</th>
     <th>Po no</th>
     <th>Deliver date</th>
-    <th>Pickup</th>
     <th>Phone no</th>
-    <th>Address</th>
-    <th colspn="3"></th>
+    <th colspn="4"></th>
    
   </tr>
  </thead>
@@ -23,12 +21,11 @@
     <td><%= delivery.delivery_note %></td>
     <td><%= delivery.po_no %></td>
     <td><%= delivery.deliver_date %></td>
-    <td><%= delivery.pickup %></td>
     <td><%= delivery.phone_no %></td>
-    <td><%= delivery.address %></td>
-    <td><%= link_to 'Show', delivery %></td>
-    <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
-    <td><%= link_to 'Destroy', delivery, :confirm => 'Are you sure?', :method => :delete %></td>
+     <td><%= link_to "Units", pickup_delivery_delivery_units_path(@pickup, delivery) %></td>
+    <td><%= link_to 'Show', pickup_delivery_path(@pickup, delivery) %></td>
+    <td><%= link_to 'Edit', edit_pickup_delivery_path(@pickup, delivery) %></td>
+    <td><%= link_to 'Destroy', pickup_delivery_path(@pickup, delivery), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
   </tbody>
@@ -36,4 +33,4 @@
 
 <br />
 
-<%= link_to 'New Delivery', new_delivery_path, :class => "btn info" %>
+<%= link_to 'New Delivery', new_pickup_delivery_path(@pickup), :class => "btn info" %>

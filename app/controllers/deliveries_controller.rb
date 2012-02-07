@@ -1,83 +1,48 @@
 class DeliveriesController < ApplicationController
-  # GET /deliveries
-  # GET /deliveries.xml
+  before_filter :get_pickup
+  
+  def get_pickup
+  @pickup = Pickup.find(params[:pickup_id])
+  end
+  
   def index
-    @deliveries = Delivery.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @deliveries }
-    end
+    @deliveries = @pickup.deliveries
   end
 
-  # GET /deliveries/1
-  # GET /deliveries/1.xml
   def show
     @delivery = Delivery.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @delivery }
-    end
   end
 
-  # GET /deliveries/new
-  # GET /deliveries/new.xml
   def new
     @delivery = Delivery.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @delivery }
-    end
   end
 
-  # GET /deliveries/1/edit
   def edit
     @delivery = Delivery.find(params[:id])
   end
 
-  # POST /deliveries
-  # POST /deliveries.xml
   def create
-    @delivery = Delivery.new(params[:delivery])
+    @delivery = @pickup.deliveries.new(params[:delivery])
 
-    respond_to do |format|
       if @delivery.save
-        format.html { redirect_to(@delivery, :notice => 'Delivery was successfully created.') }
-        format.xml  { render :xml => @delivery, :status => :created, :location => @delivery }
+ redirect_to(pickup_deliveries_path(@pickup), :notice => 'Delivery was successfully created.') 
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @delivery.errors, :status => :unprocessable_entity }
-      end
+render :action => "new" 
     end
   end
 
-  # PUT /deliveries/1
-  # PUT /deliveries/1.xml
   def update
     @delivery = Delivery.find(params[:id])
-
-    respond_to do |format|
       if @delivery.update_attributes(params[:delivery])
-        format.html { redirect_to(@delivery, :notice => 'Delivery was successfully updated.') }
-        format.xml  { head :ok }
+redirect_to(pickup_deliveries_path(@pickup), :notice => 'Delivery was successfully updated.') 
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @delivery.errors, :status => :unprocessable_entity }
-      end
+render :action => "edit" 
     end
   end
 
-  # DELETE /deliveries/1
-  # DELETE /deliveries/1.xml
-  def destroy
+def destroy
     @delivery = Delivery.find(params[:id])
     @delivery.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(deliveries_url) }
-      format.xml  { head :ok }
-    end
-  end
+	 redirect_to(pickup_deliveries_path(@pickup))
+  end  
 end
