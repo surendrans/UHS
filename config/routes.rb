@@ -1,11 +1,13 @@
 WincorNixdorf::Application.routes.draw do
+
+
+  resources :pickups do
+  
+  resources :deliveries do
   resources :delivery_units
+  end
+  end
 
-  resources :deliveries
-
-  resources :pickups
-
-  resources :payment_histories
 
   resources :admins
 
