@@ -7,18 +7,18 @@ Released for free under a Creative Commons Attribution 2.5 License
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Wincor-Nixdorf | MSI | NRF Demo </title>
+<title>UHS POC </title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
+<body style='background: url(/images/bodyBg.png);'>
   
   <div id="wrapper">
     <div id="header">
-       <h1><div class="img_left"><img src="http://www.wincor-nixdorf.com/internet/cae/servlet/contentblob/360/normal/1/logo_a.gif" /></div></h1>
+       <h1><div class="img_left" style="color:white">UHS-POC</div></h1>
        <h1><div class="img_right"><img src="http://www.motorolasolutions.com/web/Business/Resources/bms10/images/solutionslogo.png" /></div></h1>
        
     </div>
@@ -27,7 +27,9 @@ Released for free under a Creative Commons Attribution 2.5 License
   <div class="content">
     <div class="row">
       <div class="span12" id="content">
-        <div class="well"><h2>Welcome to UHS - POC</h2></div>
+        <div class="well"><h2>
+        <%= yield :title_head %>
+        </h2></div>
 		<%= yield %>
       </div>
       <div class="span4" id="side_bar">

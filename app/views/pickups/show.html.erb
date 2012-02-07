@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<% content_for :title_head, @pickup.name %>
 <table class="bordered-table">
   <tbody>
     <tr>
@@ -12,5 +13,5 @@
     </tbody>
 </table>
 
-<%= link_to 'Edit', edit_pickup_path(@pickup) %> |
-<%= link_to 'Back', pickups_path %>
+<%= link_to 'Edit', edit_pickup_path(@pickup), :class=> "btn" %> 
+<%= link_to 'Back', pickups_path, :class=> "btn" %>
