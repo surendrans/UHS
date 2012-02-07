@@ -1,17 +1,17 @@
 <h1>Listing delivery_units</h1>
 
-<table>
+<table class="bordered-table zebra-striped">
+ <thead>
   <tr>
     <th>Manufacturer</th>
     <th>Unit model</th>
     <th>Desc</th>
     <th>Prefix serial</th>
     <th>Delivery</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspn="3"></th>
   </tr>
-
+ </thead>
+ <tbody>
 <% @delivery_units.each do |delivery_unit| %>
   <tr>
     <td><%= delivery_unit.manufacturer %></td>
@@ -24,8 +24,9 @@
     <td><%= link_to 'Destroy', delivery_unit, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+ </tbody>
 </table>
 
 <br />
 
-<%= link_to 'New Delivery unit', new_delivery_unit_path %>
+<%= link_to 'New Delivery unit', new_delivery_unit_path, :class => "btn info" %>

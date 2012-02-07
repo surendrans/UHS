@@ -1,44 +1,41 @@
 <p id="notice"><%= notice %></p>
+<table class="bordered-table">
+  <tbody>
+    <tr>
+      <td><b>Transfer no:</b></td>
+      <td><%= @delivery.transfer_no %></td>
+    </tr>
+    <tr>
+      <td><b>Ordered by:</b></td>
+      <td><%= @delivery.ordered_by %></td>
+    </tr>
+    <tr>
+      <td><b>Delivery note:</b></td>
+      <td><%= @delivery.delivery_note %></td>
+    </tr>
+    <tr>
+      <td><b>Po no:</b></td>
+      <td><%= @delivery.po_no %></td>
+    </tr>
+    <tr>
+      <td><b>Deliver date:</b></td>
+      <td><%= @delivery.deliver_date %></td>
+    </tr>
+    <tr>
+      <td><b>Pickup:</b></td>
+      <td><%= @delivery.pickup %></td>
+    </tr>
+    <tr>
+      <td><b>Phone no:</b></td>
+      <td><%= @delivery.phone_no %></td>
+    </tr>
+    <tr>
+      <td><b>Address:</b></td>
+      <td><%= @delivery.address %></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>
-  <b>Transfer no:</b>
-  <%= @delivery.transfer_no %>
-</p>
-
-<p>
-  <b>Ordered by:</b>
-  <%= @delivery.ordered_by %>
-</p>
-
-<p>
-  <b>Delivery note:</b>
-  <%= @delivery.delivery_note %>
-</p>
-
-<p>
-  <b>Po no:</b>
-  <%= @delivery.po_no %>
-</p>
-
-<p>
-  <b>Deliver date:</b>
-  <%= @delivery.deliver_date %>
-</p>
-
-<p>
-  <b>Pickup:</b>
-  <%= @delivery.pickup %>
-</p>
-
-<p>
-  <b>Phone no:</b>
-  <%= @delivery.phone_no %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @delivery.address %>
-</p>
 
 
 <%= link_to 'Edit', edit_delivery_path(@delivery) %> |

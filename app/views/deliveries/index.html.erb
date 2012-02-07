@@ -1,6 +1,7 @@
 <h1>Listing deliveries</h1>
 
-<table>
+<table class="bordered-table zebra-striped" width="640px;">
+ <thead>
   <tr>
     <th>Transfer no</th>
     <th>Ordered by</th>
@@ -10,11 +11,11 @@
     <th>Pickup</th>
     <th>Phone no</th>
     <th>Address</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspn="3"></th>
+   
   </tr>
-
+ </thead>
+ <tbody>
 <% @deliveries.each do |delivery| %>
   <tr>
     <td><%= delivery.transfer_no %></td>
@@ -30,8 +31,9 @@
     <td><%= link_to 'Destroy', delivery, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
 
-<%= link_to 'New Delivery', new_delivery_path %>
+<%= link_to 'New Delivery', new_delivery_path, :class => "btn info" %>

@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Manufacturer:</b>
-  <%= @delivery_unit.manufacturer %>
-</p>
-
-<p>
-  <b>Unit model:</b>
-  <%= @delivery_unit.unit_model %>
-</p>
-
-<p>
-  <b>Desc:</b>
-  <%= @delivery_unit.desc %>
-</p>
-
-<p>
-  <b>Prefix serial:</b>
-  <%= @delivery_unit.prefix_serial %>
-</p>
-
-<p>
-  <b>Delivery:</b>
-  <%= @delivery_unit.delivery %>
-</p>
+<table class="bordered-table">
+  <tbody>
+    <tr>
+      <td><b>Manufacturer:</b></td>
+      <td><%= @delivery_unit.manufacturer %></td>
+    </tr>
+    <tr>
+      <td><b>Unit model:</b></td>
+      <td><%= @delivery_unit.unit_model %></td>
+    </tr>
+    <tr>
+      <td><b>Desc:</b></td>
+      <td><%= @delivery_unit.desc %></td>
+    </tr>
+    <tr>
+      <td><b>Prefix serial:</b></td>
+      <td><%= @delivery_unit.prefix_serial %></td>
+    </tr>
+    <tr>
+      <td><b>Delivery:</b></td>
+      <td><%= @delivery_unit.delivery %></td>
+    </tr>
+    
+  </tbody>
+</table>
 
 
 <%= link_to 'Edit', edit_delivery_unit_path(@delivery_unit) %> |

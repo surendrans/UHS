@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @pickup.name %>
-</p>
-
-<p>
-  <b>Code:</b>
-  <%= @pickup.code %>
-</p>
-
+<table class="bordered-table">
+  <tbody>
+    <tr>
+      <td><b>Name:</b></td>
+      <td> <%= @pickup.name %></td>
+    </tr>
+    <tr>
+      <td><b>Code:</b></td>
+      <td><%= @pickup.code %></td>
+    </tr>
+    </tbody>
+</table>
 
 <%= link_to 'Edit', edit_pickup_path(@pickup) %> |
 <%= link_to 'Back', pickups_path %>
