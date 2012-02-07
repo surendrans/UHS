@@ -1,3 +1,4 @@
+<% content_for :title_head,  @delivery.ordered_by  %>
 <p id="notice"><%= notice %></p>
 <table class="bordered-table">
   <tbody>
@@ -22,10 +23,6 @@
       <td><%= @delivery.deliver_date %></td>
     </tr>
     <tr>
-      <td><b>Pickup:</b></td>
-      <td><%= @delivery.pickup %></td>
-    </tr>
-    <tr>
       <td><b>Phone no:</b></td>
       <td><%= @delivery.phone_no %></td>
     </tr>
@@ -37,5 +34,5 @@
 </table>
 
 
-<%= link_to 'Edit', edit_pickup_delivery_path(@pickup, @delivery) %> |
-<%= link_to 'Back', pickup_deliveries_path(@pickup) %>
+<%= link_to 'Edit', edit_pickup_delivery_path(@pickup, @delivery), :class => "btn" %> 
+<%= link_to 'Back', pickup_deliveries_path(@pickup), :class => "btn" %>

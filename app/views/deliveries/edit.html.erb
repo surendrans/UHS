@@ -1,6 +1,5 @@
-<h1>Editing delivery</h1>
-
+<% content_for :title_head,  "Editing delivery"%>
 <%= render 'form' %>
 
-<%= link_to 'Show', pickup_delivery_path(@pickup, @delivery) %> |
-<%= link_to 'Back', pickup_deliveries_path(@pickup) %>
+<%= link_to 'Show', pickup_delivery_path(@pickup, @delivery) , :class => "btn"%> 
+<%= link_to 'Back', pickup_deliveries_path(@pickup) , :class => "btn"%>

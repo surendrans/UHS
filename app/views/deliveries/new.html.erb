@@ -1,5 +1,4 @@
-<h1>New delivery</h1>
-
+<% content_for :title_head,  "New delivery" %>
 <%= render 'form' %>
 
-<%= link_to 'Back', pickup_deliveries_path(@pickup) %>
+<%= link_to 'Back', pickup_deliveries_path(@pickup) , :class => "btn"%>
